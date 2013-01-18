@@ -37,7 +37,7 @@ and not specified in configuration will be ignored. Any other files will also be
 
 You can include more files by changing the configuration. More below.
 
-# 4. Configuration
+# 5. Configuration
 
 You can specify the configuration file in your project `directory/fuser_config.json`, or any other
 files, but you will need to pass in the path to the configration file.
@@ -65,7 +65,7 @@ Note that files are not minified unless they are reference in `index.html`, or a
 
 If a JavaScript file is copied and also included in `extraScripts`, the minified version will override the copied version.
 
-# 5. License
+# 6. License
 
 * Fuser.js is licensed under [MIT](https://github.com/yyjhao/fuser-js/blob/master/MIT-LICENSE.txt)
   
