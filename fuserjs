@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+if(process.argv.length < 3){
+	console.log("Usage: fuser.js <project directory> <output directory> [configuration file]");
+	console.log("Note: default configuration file will be <project directory>/fuser_config.js");
+}else{
+	var main = require("./lib/main"),
+		fs = require("fs"),
+		path = require("path");
+	// get absolute path
+	var projectDir = path.resolve(process.cwd(), process.argv[2]),
+		outputDir = path.resolve(process.cwd(), process.argv[3]),
+		conf = {};
+	if(process.argv[4]){
+		conf = JSON.parse(fs.readFileSync(argv[4]));
+	}else if(fs.existsSync(path.resolve(projectDir, "./fuser_config.json"))){
+		conf = JSON.parse(fs.readFileSync(path.resolve(projectDir, "./fuser_config.json")));
+	}
+	main(projectDir, outputDir, conf, function(){
+		console.log("Done!");
+	});
+}

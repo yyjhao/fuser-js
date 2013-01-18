@@ -1,0 +1,32 @@
+{
+  "name": "fuser-js",
+  "description": "Fuser.JS — All-in-one single-page web app deployment script",
+  "keywords": ["minify", "compress", "deploy"],
+  "version": "0.0.1",
+  "homepage": "http://github.com/yyjhao/fuser-js",
+  "author": {
+    "name": "Yao Yujian",
+    "email": "yyjhao@gmail.com",
+    "url": "http://yjyao.com/"
+  },
+  "files": ["./lib", "./fuserjs"],
+  "main": "./lin/main.js",
+  "bin": {
+    "fuserjs": "./fuserjs"
+  },
+  "preferGlobal": "true",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/yyjhao/fuser-js"
+  },
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "licenses": "MIT",
+  "dependencies": {
+    "ncp": "",
+    "csso": "",
+    "uglify-js": "",
+    "zombie": ""
+  }
+}
